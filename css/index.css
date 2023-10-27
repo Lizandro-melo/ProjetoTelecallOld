@@ -1,0 +1,1042 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300&display=swap');
+
+/*
+ * Customizaçõs Principais
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lexend Deca', sans-serif;
+    transition: background 500ms;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #CA1C2A;
+    --secundary-color: #AA1824;
+    --text-primary-color: #004A7B;
+    --text-color-article: #004A7B;
+    --bg-color-form: #d9d9d9b6;
+    --text-secundary-color: #DF202F;
+    --bg-color-entradas: #D1D1D1;
+    --text-planos-color: #006bcd;
+    --bg-color-article: #f0f0f0;
+    --bg-color-footer: #CA1C2A;
+    --shadow-color-primary: #e7e7e7;
+    --shadow-color-secundary: #ffffff;
+    --bg-color-padrao: white;
+    --text-button-hover: white;
+    --bg-color-button-theme: black;
+    --text-mensagem-color: black;
+    --invert: 0;
+}
+
+
+body {
+    background-color: var(--bg-color-padrao);
+    width: 100%;
+    height: 100%;
+
+}
+
+/*
+ * customizações do header secundario
+*/
+
+#header-secundario {
+    background-color: var(--secundary-color);
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 27px;
+}
+
+#header-secundario ul {
+    display: flex;
+    margin: 0 5px;
+}
+
+
+#header-secundario ul li button {
+    display: flex;
+    border: none;
+    align-items: center;
+    padding: 0 11px;
+    height: 20px;
+    background-color: white;
+    margin: 0 0 0 10px;
+    border-radius: 100px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 400ms;
+}
+
+.button-header-secundario:hover {
+    transform: translateY(20%) scale(105%);
+}
+
+#themes {
+    background-color: var(--bg-color-button-theme) !important;
+}
+
+#themes img {
+    filter: invert(var(--invert));
+}
+
+#header-secundario ul li button img {
+    width: 30px;
+}
+
+.button-font-size {
+    position: relative;
+}
+
+.input-font-size {
+    position: absolute;
+    background-color: #f0f0f0;
+    border: 1px solid;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 28px;
+    left: -50px;
+    top: 25px;
+    transition: top 500ms;
+}
+
+.input-font-size-hidden {
+    top: -120px !important;
+}
+
+.font-size-input {
+    appearance: none;
+    height: 5px;
+    margin: 0 20px;
+}
+
+
+
+#user-li {
+    position: relative;
+
+}
+
+.janela-user {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-self: center !important;
+    flex-direction: column !important;
+    z-index: 5;
+    top: 23px;
+    transition: top 500ms;
+
+}
+
+.janela-user-hidden {
+    top: -170px !important;
+}
+
+.janela-user-nav {
+
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+}
+
+.janela-user-ul {
+    border: 1px solid;
+    display: flex !important;
+    align-items: center !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+}
+
+.janela-user-li {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.janela-user-button {
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    width: 110px !important;
+    height: 40px !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    padding: 0px !important;
+}
+
+.janela-user-button:hover {
+    background-color: #cccccc !important;
+}
+
+/*
+ * customizações do header primario
+*/
+
+#primary-header {
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 63px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 15px rgb(122, 122, 122);
+}
+
+#primary-header img {
+    width: 200px;
+    border-radius: 50px;
+    margin: 0 30px;
+    cursor: default;
+}
+
+#primary-header nav ul {
+    display: flex;
+}
+
+
+#primary-header nav ul li a {
+    text-decoration: none;
+    color: var(--text-primary-color);
+    font-weight: bold;
+    font-size: 15px;
+    height: 36px;
+    width: 143px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 50px;
+    margin: 0 20px 0 3px;
+}
+
+/*
+ * customizações do formulario
+*/
+
+/*
+ * customizações login
+*/
+
+.janela-mensagem {
+    box-shadow: 0 0 100px 1000px rgba(0, 0, 0, 0.397);
+    height: 40px;
+    width: 300px;
+    background-color: #f0f0f0;
+    display: flex;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    padding: 70px;
+    z-index: 2;
+    transition: transform 200ms;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%) scale(0%);
+}
+
+.janela-mensagem h2 {
+    font-size: 20px;
+    text-align: center;
+    font-weight: lighter;
+    color: black;
+}
+
+.exit {
+    position: absolute;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    right: 30px;
+    top: 20px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: lighter;
+}
+
+.esqueci-senha {
+    width: 400px;
+    background-color: var(--bg-color-form);
+    border-radius: 30px;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    flex-direction: column;
+    align-items: center;
+    padding: 70px;
+    z-index: 2;
+    transition: transform 200ms;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%) scale(0%);
+}
+
+.esconder-container {
+    transform: translate(-50%, -40%) scale(0) !important;
+}
+
+.aparecer-container {
+    transform: translate(-50%, -40%) scale(100%) !important;
+}
+
+#form-login {
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bg-color-form);
+    width: 400px;
+    padding: 70px;
+    transition: transform 200ms;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%) scale(100%);
+
+}
+
+.banner {
+    background-color: var(--primary-color);
+    width: 298px;
+    height: 58px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0 13px 0;
+    color: white;
+}
+
+.banner h1 {
+    font-size: 24px;
+    color: white;
+}
+
+.container-entradas-login {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 50px 0 45px;
+}
+
+.entrada-login {
+    width: 289px !important;
+}
+
+.container-button-login {
+    position: relative;
+    width: 289px;
+    display: flex;
+    justify-content: center;
+}
+
+#msg-login {
+    position: absolute;
+    width: 110px;
+    left: 0px;
+    top: 2px;
+}
+
+#msg-login-senha {
+    position: absolute;
+    width: 95px;
+    right: 0px;
+    top: 0px;
+}
+
+
+
+.container-button-login button {
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    font-size: 12px;
+    border-radius: 5px;
+    width: 133px;
+    height: 45px;
+    cursor: pointer;
+    margin-top: 40px;
+    transition: background 0.8s;
+}
+
+/*
+ * customizações cadastro
+*/
+
+#form-cadastro {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color-form);
+    width: 770px;
+    padding: 10px 0 30px 0;
+    border-radius: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%) scale(100%);
+}
+
+#area-entradas {
+    display: flex;
+    justify-content: center;
+
+}
+
+.container-entradas-cadastro {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#area-esquerda {
+    margin-right: 20px;
+}
+
+.area-dupla {
+    display: flex;
+}
+
+.area-dupla div {
+    display: flex;
+    flex-direction: column;
+}
+
+.area-dupla div:first-child {
+    margin-right: 10px;
+}
+
+#area-direita {
+    margin-left: 20px;
+}
+
+#conteiner-buttons-cadastro {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    width: 730px;
+}
+
+#msg-cadastro {
+    position: absolute;
+    width: 140px;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 80%;
+}
+
+#button-cadastro {
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    font-size: 12px;
+    border-radius: 5px;
+    width: 133px;
+    height: 45px;
+    cursor: pointer;
+    transition: background-color 0.8s;
+}
+
+/*
+ * Funcionalidades
+*/
+
+.linkado {
+    border-radius: 48px;
+    background: #ffffff;
+    box-shadow: inset 16px 16px 22px #c9c9c9,
+        inset -16px -16px 22px #ebeaea;
+    color: #072f4d !important;
+    cursor: default;
+}
+
+.icon-theme-write {
+    background-color: white !important;
+}
+
+
+#button-cadastro:hover,
+#button-login:hover {
+    background-color: #ad121f;
+}
+
+
+#msg-login,
+#msg-cadastro,
+#a-help,
+#a-help-senha {
+    text-decoration: none;
+    font-size: 11px;
+}
+
+#msg-login a,
+#msg-login-senha a,
+#msg-cadastro a {
+    color: var(--text-secundary-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/*
+ * Unitarios
+*/
+
+ul {
+    list-style-type: none;
+}
+
+label {
+    font-size: 13px;
+    font-weight: bolder;
+    margin: 10px 0;
+}
+
+input,
+select {
+    width: auto;
+    height: 41px;
+    background-color: var(--bg-color-entradas);
+    border: none;
+    text-align: center;
+    transition: outline 80ms;
+}
+
+select {
+    width: auto !important;
+
+}
+
+input[type="date"] {
+    width: 114% !important;
+    text-align: center;
+}
+
+input[type=password]::-ms-reveal,
+input[type=password]::-ms-clear {
+    position: absolute;
+    right: 5px;
+    width: 20px;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid var(--text-secundary-color);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color-article);
+}
+
+#carrossel {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+
+#imagens {
+    width: 100%;
+    height: 420px;
+    display: flex;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    padding: 0 50px;
+}
+
+.slides {
+    flex: none;
+    width: 1200px;
+    margin: 0 70px;
+    z-index: -1;
+    scroll-snap-align: center;
+}
+
+#beneficios,
+#planos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#beneficios::before,
+#planos::before,
+#mapa::before {
+    content: "";
+    width: 800px;
+    box-shadow: 0 0 10px 1px rgb(150, 149, 149);
+    margin: 50px 0 50px 0;
+}
+
+#container-beneficios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 1200px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    z-index: 1;
+}
+
+#container-beneficios article h2 {
+    font-size: 18px;
+}
+
+#container-beneficios article p {
+    font-size: 12px;
+    text-align: center;
+}
+
+#container-beneficios article,
+#internet article,
+#telefonia article {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 40px;
+    background: var(--bg-color-article);
+    box-shadow: -22px 22px 20px var(--shadow-color-primary),
+        22px -22px 20px var(--shadow-color-secundary);
+    width: 230px;
+    height: 230px;
+    margin: 30px 30px;
+    padding: 10px;
+    transition: transform 0.5s;
+}
+
+#container-beneficios article:hover,
+#internet article:hover,
+#telefonia article:hover {
+    transform: scale(110%);
+}
+
+#internet article .black,
+#telefonia article .black {
+    color: black;
+}
+
+#internet article span,
+#telefonia article span {
+    font-weight: bold;
+    color: var(--text-planos-color);
+}
+
+#internet article h2,
+#internet article h3,
+#telefonia article h2 {
+    font-weight: lighter;
+}
+
+
+
+#container-planos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#container-planos h2 {
+    margin: 20px 0 0 0;
+    font-size: 20px;
+}
+
+
+
+#internet,
+#telefonia {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#internet article button,
+#telefonia article button {
+    background-color: var(--bg-color-article);
+    width: 100px;
+    height: 30px;
+    border: 1px solid var(--text-planos-color);
+    color: var(--text-planos-color);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+
+
+#internet article button:hover,
+#telefonia article button:hover {
+    background-color: var(--text-planos-color);
+    color: var(--text-button-hover);
+}
+
+#mapa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#display-map {
+    width: 100%;
+    border-radius: 40px;
+    box-shadow: -22px 22px 20px var(--shadow-color-primary),
+        22px -22px 20px var(--shadow-color-secundary);
+    margin: 40px 0 70px 0;
+    transition: transform 0.5s;
+    border: none;
+}
+
+footer {
+    width: 100%;
+    height: 400px;
+    background-color: var(--bg-color-footer);
+    position: relative;
+}
+
+#container-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.copy {
+    text-decoration: none;
+    color: black;
+}
+
+
+.esquerda-footer {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 100%;
+    justify-content: left;
+}
+
+#sobre-a-telecall {
+    display: flex;
+    width: 70%;
+    height: 40%;
+    flex-direction: column;
+
+}
+
+.direita-footer {
+    display: flex;
+}
+
+.esquerda-footer:nth-child(1),
+.direita-footer:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+}
+
+.esquerda-footer:nth-child(1)::after,
+.direita-footer:nth-child(1)::after {
+    content: "";
+    width: 1px;
+    height: 100%;
+    background-color: var(--bg-color-padrao);
+    position: absolute;
+    left: 50%;
+    transform: translate(50%);
+}
+
+.esquerda-footer:nth-child(2),
+.direita-footer:nth-child(2) {
+    display: flex;
+    width: 100%;
+    height: 400px;
+}
+
+#table-footer tr td a {
+    color: black;
+    text-decoration: none;
+}
+
+#table-footer tr td {
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+}
+
+#table-footer {
+    display: flex;
+    padding: 30px 100px;
+
+}
+
+#sobre-a-telecall {
+    display: flex;
+    padding: 25px 20px 80px 20px;
+}
+
+#container-logo-footer {
+    background-color: #ffffff;
+    filter: opacity(100%);
+    padding: 20px;
+    border-radius: 40px;
+}
+
+#logo-footer {
+    filter: invert(100%);
+}
+
+#btnTop {
+    position: fixed;
+    bottom: 30px;
+    right: -70px;
+    font-size: 18px;
+    border: none;
+    background-color: var(--bg-color-article);
+    color: var(--text-planos-color);
+    border: 1px solid var(--text-planos-color);
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: 1s;
+    z-index: 100;
+}
+
+#btnTop:hover {
+    background-color: var(--text-planos-color);
+    color: var(--text-button-hover);
+}
+
+.cpaas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-cpaas {
+    width: 700px;
+    border-radius: 20px;
+    transition: transform 500ms;
+    margin: 40px;
+    box-shadow: -22px 22px 20px var(--shadow-color-primary),
+        22px -22px 20px var(--shadow-color-secundary);
+}
+
+.areaSenha{
+    position: relative;
+}
+
+.areaLogin{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.mensagem{
+    position: absolute;
+    font-size: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    background-color: var(--bg-color-article);
+    top: -20px;
+    transform: scaleY(0);
+    transition: transform 500ms;
+    width: 100%;
+}
+
+.mostrarMensagem{
+    
+    
+    transform: scaleY(100%) !important;
+}
+
+@media screen and (min-width: 1440px) {
+    #carrossel {
+        width: 1300px;
+    }
+
+    #container-beneficios {
+        width: 1400px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+
+    .img-cpaas {
+        width: 500px;
+    }
+
+    #primary-header nav ul {
+        display: none;
+    }
+
+    #container-beneficios {
+        width: 100%;
+
+    }
+
+    #container-beneficios article,
+    #internet article,
+    #telefonia article {
+        transform: scale(85%);
+    }
+
+    #primary-header {
+        justify-content: center;
+    }
+
+    #header-secundario {
+        justify-content: center;
+    }
+
+    #header-secundario ul li {
+        justify-content: space-between;
+        margin: 20px;
+    }
+
+    #carrosel {
+        width: 100%;
+    }
+
+    #imagens {
+        height: 100%;
+        padding: 0 0;
+    }
+
+    .slides {
+        width: 100%;
+    }
+
+    #logo-footer {
+        width: 100px;
+    }
+
+    #sobre-a-telecall h2 {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    #sobre-a-telecall p {
+        font-size: 9px;
+        text-align: center;
+    }
+
+    #table-footer tr td {
+        font-size: 10px;
+        padding: 10px 0;
+    }
+
+    #table-footer {
+        padding: 70px 15px;
+    }
+
+    #esqueci-senha,
+    #form-login,
+    #form-cadastro {
+        width: 100%;
+        padding: 70px 0;
+        border-radius: 0px;
+    }
+
+    .banner {
+        width: 188px;
+        height: 58px;
+    }
+
+    .banner h1 {
+        font-size: 18px;
+
+    }
+
+    #area-entradas {
+        flex-direction: column;
+    }
+
+    #area-direita,
+    #area-esquerda {
+        margin: 0;
+    }
+
+    #form-cadastro {
+        flex-direction: column;
+        margin: 0;
+        position: static;
+        transform: translate(0);
+    }
+
+    #conteiner-buttons-cadastro {
+        justify-content: start;
+        width: 280px;
+        margin: 50px 0;
+    }
+
+    #container-mensagem-help-cadastro {
+        position: absolute;
+        left: 60%;
+    }
+
+    .janela-mensagem{
+        width: 200px;
+        
+    }
+
+    .janela-mensagem h2{
+        font-size: 20px;
+        
+    }
+
+    .img-cpaas{
+       width: 100%;
+       margin: 30px 0;
+    }
+
+    #header-secundario ul li button{
+        font-size: 11px;
+        margin: 0;
+    }
+
+    #header-secundario ul li{
+        margin: 0 10px;
+    }
+}
